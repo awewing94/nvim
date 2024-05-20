@@ -19,8 +19,6 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 -- Closing brackets
 vim.keymap.set("i", "{", "{}<Left>")
 vim.keymap.set("i", "{<CR>", "{<CR>}<Esc>O")
-vim.keymap.set("i", "{{", "{")
-vim.keymap.set("i", "{}", "{}")
 
 -- leader
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
