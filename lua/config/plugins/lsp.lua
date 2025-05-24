@@ -17,6 +17,8 @@ return {
     config = function()
       require("lspconfig").lua_ls.setup {}
       require("lspconfig").gopls.setup {}
+      vim.lsp.enable('jsonls')
+      -- require("lspconfig").jsonls.setup {}
 
       vim.api.nvim_create_autocmd('LspAttach', {
         -- Auto-format ("lint") on save.
