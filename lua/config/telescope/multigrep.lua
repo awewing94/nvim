@@ -30,15 +30,10 @@ local live_multigrep = function(opts)
       end
 
 
-      -- return vim.iter({
-      --   args,
-      --   { "--color=never", "--no-heading", "--with-filename", "--line-number", "--column", "smart-case" }
-      -- }):flatten():totable()
-      ---@diagnostic disable-next-line: deprecated
-      return vim.tbl_flatten {
+      return vim.iter({
         args,
-        { "--color=never", "--no-heading", "--with-filename", "--line-number", "--column", "smart-case" }
-      }
+        { "--color=never", "--no-heading", "--with-filename", "--line-number", "--column", "--smart-case" }
+      }):flatten():totable()
     end,
     entry_maker = make_entry.gen_from_vimgrep(opts),
     cwd = opts.cwd
