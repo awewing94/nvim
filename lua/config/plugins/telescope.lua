@@ -30,6 +30,7 @@ return {
         cwd = vim.fn.stdpath("config")
       }
     end)
+    -- Edit plugins
     vim.keymap.set("n", "<leader>ep", function()
       builtin.find_files {
         cwd = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy")
