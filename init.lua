@@ -8,7 +8,7 @@ vim.opt.clipboard = "unnamedplus"
 
 vim.keymap.set("n", "<leader>q", ":q<CR>")
 vim.keymap.set("n", "<leader>w", ":update<CR>")
-vim.keymap.set("n", "<leader>ex", ":Explore<CR>")
+vim.keymap.set("n", "<leader>ex", ":Oil<CR>")
 vim.keymap.set("n", "<M-j>", "<cmd>cnext<CR>")
 vim.keymap.set("n", "<M-k>", "<cmd>cprev<CR>")
 vim.keymap.set("n", "<leader>df", function()

@@ -15,8 +15,12 @@ return {
       },
     },
     config = function()
-      require("lspconfig").lua_ls.setup {}
-      require("lspconfig").gopls.setup {}
+      local defaultSetup = {
+        capabilities = require('blink.cmp').get_lsp_capabilities(),
+      }
+
+      require("lspconfig").lua_ls.setup(defaultSetup)
+      require("lspconfig").gopls.setup(defaultSetup)
 
       vim.api.nvim_create_autocmd('LspAttach', {
         -- Auto-format ("lint") on save.
