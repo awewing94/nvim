@@ -10,6 +10,7 @@ return {
     -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
     lazy = false,
     config = function()
+      require("oil").setup()
       -- Remove ctrl-p keybinding so it works with telescope still
       require("oil.actions").preview = { false }
     end
