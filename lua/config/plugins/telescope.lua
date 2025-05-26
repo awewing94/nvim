@@ -11,9 +11,8 @@ return {
       defaults = {
         preview = {
           treesitter = {
-            -- Only enable treesitter for languages we know we have an lsp installed for
-            --  ...I think. I don't understand this 100%
-            enable = { "lua", "go" }
+            -- Only enable treesitter for lua..? because it only works for lua..?
+            enable = { "lua" }
           }
         }
       },
