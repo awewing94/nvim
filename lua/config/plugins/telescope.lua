@@ -9,6 +9,9 @@ return {
   config = function()
     require("telescope").setup {
       defaults = {
+	path_display = {
+	  truncate = true
+	},
         preview = {
           treesitter = {
             -- Only enable treesitter for lua..? because it only works for lua..?
