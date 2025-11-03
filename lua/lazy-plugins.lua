@@ -31,25 +31,25 @@ require("lazy").setup({
 	--        end,
 	--    }
 	--
-	require("kickstart.plugins.which-key"),
-	require("kickstart.plugins.telescope"),
-	require("kickstart.plugins.lsp-config"),
-	require("kickstart.plugins.conform"),
-	require("kickstart.plugins.blink-cmp"),
-	require("kickstart.plugins.harpoon"),
-	require("kickstart.plugins.oil"),
 	require("kickstart.plugins.all-themes"),
-	-- Can turn this into a wrapper to parse out what to call themeswitcher on
-	-- require("kickstart.plugins.theme"),
-	require("kickstart.plugins.todo-comments"),
-	require("kickstart.plugins.mini"),
-	require("kickstart.plugins.treesitter"),
-	require("kickstart.plugins.debug"),
-	require("kickstart.plugins.indent_line"),
-	-- require("kickstart.plugins.lint"),
 	require("kickstart.plugins.autopairs"),
-	-- require("kickstart.plugins.neo-tree"),
+	require("kickstart.plugins.blink-cmp"),
+	require("kickstart.plugins.conform"),
+	require("kickstart.plugins.debug"),
 	require("kickstart.plugins.gitsigns"), -- adds gitsigns recommend keymaps
+	require("kickstart.plugins.harpoon"),
+	require("kickstart.plugins.indent_line"),
+	require("kickstart.plugins.lsp-config"),
+	require("kickstart.plugins.mini"),
+	require("kickstart.plugins.noice"),
+	require("kickstart.plugins.oil"),
+	require("kickstart.plugins.telescope"),
+	require("kickstart.plugins.todo-comments"),
+	require("kickstart.plugins.treesitter"),
+	require("kickstart.plugins.which-key"),
+	-- require("kickstart.plugins.lint"),
+	-- require("kickstart.plugins.neo-tree"),
+	-- require("kickstart.plugins.theme"),
 
 	-- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
 	--    This is the easiest way to modularize your config.

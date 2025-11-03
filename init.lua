@@ -33,6 +33,5 @@ require('lazy-bootstrap')
 require('lazy-plugins')
 
 -- [[ Colorscheme ]]
-local fncs = require("custom.functions")
-fncs.setTheme('nord')
-
+local funcs = require("custom.functions")
+funcs.setTheme('catppuccin')
