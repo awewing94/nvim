@@ -1,56 +1,37 @@
-if not vim.g.vscode then 
-	require("config.lazy")
-end
+--[[
+Help info
+run `:help`
+    This will open up a help window with some basic information
+    about reading, navigating and searching the builtin help documentation.
 
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.wrap = false
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+    This should be the first place you go to look when you're stuck or confused
+    with something. It's one of my favorite Neovim features.
 
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
-vim.opt.clipboard = "unnamedplus"
+    MOST IMPORTANTLY, we provide a keymap "<space>sh" to [s]earch the [h]elp documentation,
+    which is very useful when you're not exactly sure of what you're looking for.
+--]]
 
-vim.keymap.set("n", "<leader>q", ":q<CR>")
-vim.keymap.set("n", "<leader>w", ":update<CR>")
-if not vim.g.vscode then 
-	vim.keymap.set("n", "<leader>ex", ":Oil<CR>")
-	vim.keymap.set("n", "<M-j>", "<cmd>cnext<CR>")
-	vim.keymap.set("n", "<M-k>", "<cmd>cprev<CR>")
-	vim.keymap.set("n", "<leader>df", function()
-		vim.diagnostic.jump({ count = 1, float = true })
-	end)
-end
+-- Set <space> as the leader key
+-- See `:help mapleader`
+--  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
--- vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
--- this shit don't work..?
--- vim.keymap.set("n", "<space>x", ":.lua <CR>")
--- vim.keymap.set("v", "<space>x", ":lua <CR>")
+-- Set to true if you have a Nerd Font installed and selected in the terminal
+vim.g.have_nerd_font = false
 
--- Highlight text that is being yanked
-vim.api.nvim_create_autocmd('TextYankPost', {
-	desc = 'Highlight when yanking (copying) text',
-	group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-	callback = function()
-		vim.highlight.on_yank()
-	end,
-})
+-- [[ Options ]]
+require('options')
 
--- Configure default window border
-vim.o.winborder = "rounded"
+-- [[ Basic Keymaps ]]
+require('keymaps')
 
--- Terminal configuration - not sure if I'll ever actually use this
-vim.api.nvim_create_autocmd('TermOpen', {
-	group = vim.api.nvim_create_augroup('custom-term-open', { clear = true }),
-	callback = function()
-		vim.opt.number = false
-		vim.opt.relativenumber = false
-	end,
-})
-vim.keymap.set("n", "<leader>st", function()
-	vim.cmd.vnew()
-	vim.cmd.term()
-	vim.cmd.wincmd("J")
-	vim.api.nvim_win_set_height(0, 15)
-end)
+-- [[ Install `lazy.nvim` plugin manager ]]
+require('lazy-bootstrap')
+
+-- [[ Configure and install plugins ]]
+require('lazy-plugins')
+
+-- [[ Colorscheme ]]
+local funcs = require("custom.functions")
+funcs.setTheme('catppuccin')

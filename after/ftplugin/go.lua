@@ -1,1 +1,0 @@
--- Custom settings for .go files

@@ -3,7 +3,6 @@ local finders = require("telescope.finders")
 local make_entry = require("telescope.make_entry")
 local conf = require("telescope.config").values
 
-
 local M = {}
 
 local live_multigrep = function(opts)
@@ -50,7 +49,7 @@ local live_multigrep = function(opts)
 end
 
 M.setup = function()
-  vim.keymap.set("n", "<leader>fg", live_multigrep)
+  vim.keymap.set("n", "<leader>sg", live_multigrep, { desc = "[S]earch by Multi[g]rep"})
 end
 
 return M
