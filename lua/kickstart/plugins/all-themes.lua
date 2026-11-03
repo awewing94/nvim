@@ -58,4 +58,10 @@ return {
     lazy = true,
     priority = 1000,
   },
+  {
+	"OldJobobo/retro-82.nvim",
+	name = "retro-82",
+	lazy = true,
+	priority = 1000,
+  },
 }
