@@ -14,6 +14,7 @@ return {
   },
   {
     "sainnhe/everforest",
+    name = "everforest",
     lazy = true,
     priority = 1000,
   },

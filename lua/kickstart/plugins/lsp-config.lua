@@ -222,6 +222,9 @@ return {
 			local servers = {
 				-- clangd = {},
 				gopls = {},
+				templ = {},
+				tailwindcss = {},
+				html = { filetypes = { "html", "templ" } },
 				ols = {
 					init_options = {
 						collections = {

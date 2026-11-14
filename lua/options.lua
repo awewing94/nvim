@@ -65,6 +65,7 @@ vim.o.cursorline = true
 vim.o.scrolloff = 6
 
 -- Default tab size. Should be overwritten by guess-indent.nvim
+vim.o.expandtab = true
 vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 

@@ -34,4 +34,4 @@ require('lazy-plugins')
 
 -- [[ Colorscheme ]]
 local funcs = require("custom.functions")
-funcs.setTheme('retro-82')
+funcs.setTheme('everforest')
